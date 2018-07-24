@@ -1,0 +1,76 @@
+FHe7cRWqkcc
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} -s [OR]
+    RewriteCond %{REQUEST_FILENAME} -l [OR]
+    RewriteCond %{REQUEST_FILENAME} -d [OR]
+    RewriteRule ^.*$ - [NC,L]
+    RewriteRule ^(.*)$ index.php [NC,L]
+</IfModule>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} -s [OR]
+    RewriteCond %{REQUEST_FILENAME} -l [OR]
+    RewriteCond %{REQUEST_FILENAME} -d [OR]
+    RewriteRule ^.*$ index.php [NC,L]
+</IfModule>
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^(.*)$ index.php/$1 [NC, L]
+</IfModule>
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [QSA,L]
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.php [L]
+</IfModule>
+
+
+$R = filter_input(INPUT_SERVER, 'REQUEST_URI');
+echo $R;
+
+/etc/apache2/sites-available/mvcframework.dev.conf
+
+    <VirtualHost *:80>
+    	DocumentRoot /var/www/mvcframework.dev/public
+    	ServerName mvcframework.dev
+    	ServerAlias www.mvcframework.dev
+    	ServerAdmin suporte@tst.com
+    	ErrorLog ${APACHE_LOG_DIR}/error.log
+    	CustomLog ${APACHE_LOG_DIR}/access.log combined
+    </VirtualHost>
+
+/etc/apache2/apache2.conf:
+
+    <Directory /var/www/mvcframework.dev>
+    	Options Indexes FollowSymLinks
+    	AllowOverride All
+    	Require all granted
+    </Directory>
+
+/etc/hosts
+
+    127.0.0.1	localhost
+    127.0.0.1	mvcframework.dev
+    #...
+    <IfModule mod_rewrite.c>
+
+      RewriteCond %{REQUEST_FILENAME} !-d
+      RewriteCond %{REQUEST_FILENAME} !-f
+      RewriteRule ^(.*)$ index.php/$1?%{QUERY_STRING} [L]
+
+      ErrorDocument 404 /index.php
+      FallbackResource /index.php
+
+    </IfModule>

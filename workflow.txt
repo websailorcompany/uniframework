@@ -1,0 +1,104 @@
+#primeiro #fazer funcionar os de escopo "adm/" com ou sem "ws/adm/"
+listar -> SQL+lista -> OK
+ModalInsere -> OK
+JS-ajax(INSERT) -> analisando
+sql(INSERT) -> Aguardando anterior
+sql(SELECT) -> Aguardando anterior
+sql(UPDATE) -> Aguardando anterior
+ModalEdita  ->  Aguardando anterior
+JS-ajax(LOAD) -> Aguardando anterior
+JS-ajax(UPDATE) -> Aguardando anterior
+
+construir classe documentos.Form
+
+recriar
+  upload de arquivos, preocupação com licenças
+
+interface admin
+  #página "componentes"
+    modulo de lista_componentes
+      (nome, descrição, área) [editar, excluir]
+    modulo insere_componentes
+      (nome, descrição, área)
+    modulo edita_componentes
+      (descrição, área)
+
+  #página "categorias"
+    modulo de listagem de categorias
+    modulo inserção de categorias
+    modulo edição de categorias
+
+  #página "usuarios"
+    modulo listagem de usuarios por escopo
+      ver:(categoria, atuação)
+    capacidade de tornar entradas editáveis
+    capacidade de criar usuários em módulo suspenso
+  #página-editar-usuario ## desnecessário
+
+  #página "rotas"
+    módulo lista_rotas
+      ver:(rota+escopo, template, posições, módulos[possíveis a partir de escopo])
+      ver:(categorias)
+    módulo edita_rota
+      com danger: "categoria do módulo não pertence escopo da rota"
+    módulo insere_rota
+      redirecionar para página-listar-página
+      com danger: "categoria do módulo não pertence escopo da rota"
+
+  #página "paginas"
+    módulo lista_paginas
+      ver:(rota+escopo, template, posições, módulos[possíveis a partir de escopo])
+      ver:(categorias)
+    módulo edita_pagina
+      com danger: "categoria do módulo não pertence escopo da rota"
+    módulo insere_pagina
+      redirecionar para página-listar-página
+
+
+  #página "modulos"
+    modulo lista_modulos por componente
+      ver:(nome, descr., componente, modulo, categorias)
+      capacidade de criar modulos em módulo suspenso
+      capacidade de inserir modulo e redirecionar para a página-listar-modulos
+  #página-editar-modulo
+    modulo edita_modulo
+      editar:(escopo, visibilidade[categorias possíveis a partir de escopo])
+
+
+
+interface para marcelo
+  #página-inicial
+    módulo 'quadro' com estatísticas de STATUS_INICIAIS atuais
+      (Recebida, Análisando, Aguarda, Boleto Gerado, Paga, Gerência)
+    modulo lista-solicitações
+      (data_receb, STATUS_INICIAIS, tempo, ext_user, last_notif)
+      capacidade de alterar status da solicitação (modal)
+      capacidade de receber notificações(modal) do externo, a princípio pré-definidas
+      capacidade de enviar notificação(modal) com texto
+  #página ver solicitação
+    módulo de visualisar a solicitação
+  #página de ver processos
+    capacidade de ver a timeline dos processos
+  ### futuramente
+  # módulo com estatísticas [30 dias](recebidas, Boletos, Pagas, Gerência)
+  # [anual][semestral][semanal][-escolha de período-]
+
+
+Notificações
+  Remetente, Destinatário, Data+Hora, Texto
+  notifica(modelo, array(params));
+
+Timeline
+  ações específicas são salvas para serem mostradas
+  titulo da ação
+  texto explicativo da ação
+  data, dia da semana, hora
+  executor da ação
+
+Drive-API
+espaço dividido em pastas, com os documentos de um processo
+cada pasta um processo
+documentos gerados durante processo ficam na aplicação(licenças, pareceres)
+
+
+//no futuro, com dual-CMS será possível que rotas públicas não tenham o prefixo pub/ sendo somente /

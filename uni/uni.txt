@@ -1,0 +1,9 @@
+uni::__construct()
+	coleta dados aleatiriamente de todo o sistema
+
+uni::execQuery($tring query)
+	// retorna vetor de resposta array($status, $Result, $numAffectedRows, $message)
+	// em caso de sucesso $status=1, o objeto DBtype_result do query requerido, numero de linhas afetadas, $message copia $query para revisão
+	// em caso de erro gera um LOG e status=0, DBtype_result=NULL, numRows=0, $message = erro
+
+

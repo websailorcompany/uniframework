@@ -1,0 +1,16 @@
+UNI - features
+BASICO
+  sistema de páginas(renovar)
+PRINCIPAL
+  gestão eletrônica de processos
+    implementando ferramentas de modelagem de workflow de processos
+    timeline geral implementada
+  gestão eletrônica de documentos
+    implementando transcrição de HTML para PDF
+    implementando transpilador de HTML para LaTeX
+
+OUTROS
+  notificações sobre demanda
+  notificações
+
+  sistema de mensagens

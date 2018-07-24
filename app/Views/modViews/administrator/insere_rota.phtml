@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <div id='conteudo'>
+    <!-- Modal -->
+    <div class="modal modal-info fade" id="modal-info" style="display: none;">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span></button>
+            <h4 class="modal-title">SISTEMA DE INSERÇÃO DE ROTAS</h4>
+          </div>
+          <div class="modal-body">
+                <form role="form" id="form_insere_rota">
+                  <div class="box-body">
+                    <div class="form-group">
+                      <label for="criaRota">Rota de Sistema Web</label>
+                      <input class="form-control" id="criaRota" placeholder="Digite a /rota/" type="text">
+                    </div>
+                    <div class="form-group">
+                  <label>ESCOPO</label>
+                  <select class="form-control">
+                    <option>-- selecione o escopo da rota --</option>
+                    <option value=1># 1 - Público</option>
+                    <option value=2># 2 - Registrado</option>
+                    <option value=3># 3 - Operacional</option>
+                    <option value=4># 4 - Admin</option>
+                  </select>
+                </div>
+
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox"> Esta rota está de acordo com o PROJETO
+                      </label>
+                    </div>
+                  </div>
+                  <!-- /.box-body -->
+
+                  <!-- <div class="box-footer">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </div> -->
+                </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-outline">Salvar</button>
+          </div>
+        </div>
+        <!-- /.modal-content -->
+      </div>
+      <!-- /.modal-dialog -->
+    </div>
+  </div>
+</html>

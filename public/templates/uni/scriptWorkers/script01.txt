@@ -1,0 +1,9 @@
+"function functionName(iddivdada) {
+  document.getElementById(iddivdada).value='funciona++';
+};
+alert(string);
+document.getElementById('sessionStorageInput').value='funciona também';
+teste01();
+functionName(iddiv);
+
+"

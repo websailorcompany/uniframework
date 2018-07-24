@@ -1,0 +1,27 @@
+#configs.json
+
+##site
+
+site.localPosts (int)
+  numero de posts a serem salvos localmente no carregamento
+site.saveReadPosts (boolean)
+  salvar posts extras lidos em storage
+site.mainPost (int)
+  id do post a ser renderizado na página principal, caso haja espaço
+site.mainPage : (int)
+  numero da página principal,
+  id onde serão encontrados os módulos e a montagem da página
+site.mainTemplate (string)
+  template a ser renderizado e utilizado
+
+##sistema
+
+sistema.tipo (int)
+  0 : nenhuma operações e transações de dados no modelo sistema
+  1 : somente operações e transações de dados no modelo REST/webservice,
+  2 : adiciona operações e transações de arquivos/documentos e imagens,
+  3 : adiciona "secure socket layer" SSH a operações e transações,
+  4 : adiciona certificação digital a operações e transações
+sistema.template (string | false)
+  "string" : nome do arquivo de template,
+  0 : sistema não trabalha com interface

@@ -1,0 +1,21 @@
+{
+  "name": "michel/microframework",
+  "description": "implementação de framework MVC com vários padrões de projeto",
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+      {
+          "name": "Michel", "email": "michel@websailor.com.br"
+      }
+  ],
+  "autoload":{
+        "psr-4":{
+            "App\\"  : "app/",
+            "Core\\" : "core/",
+            "Storage\\" : "storage/"
+        }
+    },
+    "require": {
+        "php":">=5.4"
+    }
+}

@@ -1,0 +1,22 @@
+CACHE MANIFEST
+# version 0.0.1.5 2018-02-14
+# versão json é somente detalhes
+# precisamos enviar cabeçalho:
+# ou .htaccess ou este arquivo é gerado pelo PHP
+
+CACHE:
+
+/
+/index.php
+/pwaction/pwaction.js
+/pwaction/pwaux.js
+/templates/uni/css/bootstrap.min.css
+/templates/uni/css/font-awesome.min.css
+/templates/uni/js/jquery.min.js
+/templates/uni/js/bootstrap.min.js
+/templates/uni/js/scripts.js
+
+
+NETWORK:
+
+FALLBACK:
