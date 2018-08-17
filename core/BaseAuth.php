@@ -35,11 +35,12 @@ class BaseAuth extends BaseDataBase{
         d::b($exec['result']);
         return $exec['result'];
       }else{
+        // nãp encontrado
         return NULL;
       }
     }else{
-      return NULL;
       // query errado
+      return NULL;
     }
   }
   public function execLogin($email, $password){
@@ -69,15 +70,52 @@ class BaseAuth extends BaseDataBase{
     } //erro interno
   }
 
-  public function verificaLogin($escopo, $url){
-    // PRIMEIRO VERIFICO ESCOPO DA ROTA
-    // $exec = $this->execQuery("SELECT escopo FROM rotas WHERE rota='{$rota}'");
-    // if ($exec['numRows']==1 && isset($exec['result'][0]['escopo'])) {
-    //   $escopo = $exec['result'][0]['escopo'];
-    // }else {
-    //   echo file_get_contents("../system/administrator/static/nao_encontrada_db.html");
-    //   return;
-    // }
+  public function thor($rota, $urlArray){
+    # PRIMEIRO VERIFICO ESCOPO DA ROTA
+    # coletando juntamente o action e controller
+    #
+    $exec = $this->execQuery("SELECT r.escopo as escopoid, r.controller, r.action, e.escopo FROM rotas as r , escopo as e WHERE r.rota='sys/mca/oper/{}' AND e.id=r.escopo ");
+    if ($exec['numRows']==1 && isset($exec['result'][0]['escopo'], $exec['result'][0]['controller'], $exec['result'][0]['action'])) {
+      $escopo = $exec['result'][0]['escopo'];
+      d::ulog("#auth->thor() - rota encontrada - dados consistentes - {$escopo}");
+      $req['controller'] = $exec['result'][0]['controller'];
+      $req['action'] = $exec['result'][0]['action'];
+    }else {
+      d::ulog("#auth->thor() - rota não encontrada OU dados inconsistentes");
+      return NULL;
+    }
+
+    #
+    # verifica os prefixos da url
+    #
+    if(($prefixo=array_shift($urlArray))=="ws") {
+      $req['ws']=1;
+      d::ulog("#prefixo1->WS->tipo=webservice");
+      $prefixo = array_shift($urlArray);
+      d::ulog("#prefixo2->{$prefixo}");
+    }else{
+      $req['ws']=0;
+      d::ulog("#prefixo1->{$prefixo}->tipo=pagina");
+    }
+
+    #
+    #verifica escopo
+    #
+    if($escopo == NULL){
+      d::ulog("ROTA DE DOMÍNIO PUBLICO");
+      return $req;
+    }elseif($prefixo == $escopo){
+      d::ulog("ROTA DE DOMÍNIO AUTENTIFICAVEL/AUTORIDAVEL");
+      if(in_array($prefixo, Config::$route['prefixo'])){
+        $req['prefixo']=$prefixo;
+      }else{
+        d::ulog("Prefixo não encontrado nas configurações");
+        $req['prefixo']=Config::$Pub['prefixo'];
+      }
+      return $req;
+    }else{
+      // erro não optativo => $prefixo de rota deve ser igual ao $escopo de rota
+    }
 
     if ($escopo == 'operacional' || $escopo == 'admin' || $escopo== 'registrado') { // página é acessível somente pela equipe operacional ou registrados
       // SEGUNDO VERIFICO ESCOPO DA CATEGORIA DO USUARIO

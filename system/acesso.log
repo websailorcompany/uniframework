@@ -1,0 +1,597 @@
+2018-08-16T21:29:25-03:00
+BaseDataBase new PDO ok
+2018-08-16T21:29:25-03:00
+BaseDataBase new PDO ok
+2018-08-16T21:29:25-03:00
+BaseDataBase new PDO ok
+2018-08-16T21:29:26-03:00
+BaseDataBase new PDO ok
+2018-08-16T21:29:42-03:00
+BaseDataBase new PDO ok
+2018-08-16T21:36:47-03:00
+BaseDataBase new PDO ok
+2018-08-16T21:36:47-03:00
+BaseDataBase new PDO ok
+2018-08-16T21:40:56-03:00
+BaseDataBase new PDO ok
+2018-08-16T21:42:38-03:00
+BaseDataBase new PDO ok
+2018-08-16T21:44:34-03:00
+BaseDataBase new PDO ok
+2018-08-16T21:45:11-03:00
+BaseDataBase new PDO ok
+2018-08-16T21:45:57-03:00
+BaseDataBase new PDO ok
+2018-08-16T21:46:32-03:00
+BaseDataBase new PDO ok
+2018-08-17T09:38:12-03:00
+BaseDataBase new PDO ok
+2018-08-17T09:38:13-03:00
+BaseDataBase new PDO ok
+2018-08-17T09:38:13-03:00
+BaseDataBase new PDO ok
+2018-08-17T09:38:20-03:00
+BaseDataBase new PDO ok
+2018-08-17T09:38:34-03:00
+BaseDataBase new PDO ok
+2018-08-17T09:40:53-03:00
+BaseDataBase new PDO ok
+2018-08-17T09:42:46-03:00
+BaseDataBase new PDO ok
+2018-08-17T09:46:20-03:00
+BaseDataBase new PDO ok
+2018-08-17T09:46:33-03:00
+BaseDataBase new PDO ok
+2018-08-17T09:46:34-03:00
+BaseDataBase new PDO ok
+2018-08-17T09:46:46-03:00
+BaseDataBase new PDO ok
+2018-08-17T09:46:46-03:00
+BaseDataBase new PDO ok
+2018-08-17T09:48:36-03:00
+BaseDataBase new PDO ok
+2018-08-17T09:48:36-03:00
+BaseDataBase new PDO ok
+2018-08-17T09:57:09-03:00
+BaseDataBase new PDO ok
+2018-08-17T09:57:24-03:00
+BaseDataBase new PDO ok
+2018-08-17T09:57:24-03:00
+BaseDataBase new PDO ok
+2018-08-17T10:06:44-03:00
+request: /sys/mca/oper/4 ip: 127.0.0.1
+2018-08-17T10:06:44-03:00
+BaseDataBase new PDO ok
+2018-08-17T10:06:44-03:00
+BaseDataBase new PDO ok
+2018-08-17T10:06:57-03:00
+request: /sys/mca/oper/4 ip: 127.0.0.1
+2018-08-17T10:06:57-03:00
+BaseDataBase new PDO ok
+2018-08-17T10:06:57-03:00
+BaseDataBase new PDO ok
+2018-08-17T10:06:58-03:00
+request: /sys/mca/oper/4 ip: 127.0.0.1
+2018-08-17T10:06:58-03:00
+BaseDataBase new PDO ok
+2018-08-17T10:06:58-03:00
+BaseDataBase new PDO ok
+2018-08-17T10:08:36-03:00
+request: /sys/mca/oper/4 ip: 127.0.0.1
+2018-08-17T10:09:28-03:00 rota: /sys/mca/oper/4 ip: 127.0.0.1
+2018-08-17T10:10:07-03:00 #ROTA: /sys/mca/oper/4 #IP: 127.0.0.1
+2018-08-17T10:20:29-03:00 #ROTA: /sys/mca/oper/4 #IP: 127.0.0.1
+Core\Route Object
+(
+    [req:Core\Route:private] => Array
+        (
+            [url] => /sys/mca/oper/4
+            [ws] => 0
+            [escopo] => sys
+            [params] => Array
+                (
+                    [0] => 4
+                )
+
+            [rota] => sys/mca/oper/{}
+            [controller] => WSController
+            [action] => index
+        )
+
+    [dsn:protected] => mysql:dbname=websailor;host=localhost;port=3306
+    [DBConf:Core\BaseDataBase:private] => 
+    [DBOptions:Core\BaseDataBase:private] => Array
+        (
+            [1002] => SET NAMES utf8
+        )
+
+)
+
+2018-08-17T10:21:53-03:00 #ROTA: /sys/mca/oper/4 #IP: 127.0.0.1
+2018-08-17T10:47:53-03:00 #ROTA: /sys/mca/oper/4 #IP: 127.0.0.1
+Core\Route Object
+(
+    [req:Core\Route:private] => Array
+        (
+            [url] => /sys/mca/oper/4
+            [ws] => 0
+            [escopo] => sys
+            [params] => Array
+                (
+                    [0] => 4
+                )
+
+            [rota] => sys/mca/oper/{}
+            [controller] => WSController
+            [action] => index
+        )
+
+    [dsn:protected] => mysql:dbname=websailor;host=localhost;port=3306
+    [DBConf:Core\BaseDataBase:private] => 
+    [DBOptions:Core\BaseDataBase:private] => Array
+        (
+            [1002] => SET NAMES utf8
+        )
+
+)
+
+2018-08-17T10:48:54-03:00 #ROTA: /sys/mca/oper/4 #IP: 127.0.0.1
+erro55
+erro5500
+erro55
+erro55
+Core\Route Object
+(
+    [req:Core\Route:private] => Array
+        (
+            [url] => /sys/mca/oper/4
+            [ws] => 0
+            [escopo] => sys
+            [params] => Array
+                (
+                    [0] => 4
+                )
+
+            [rota] => sys/mca/oper/{}
+            [controller] => WSController
+            [action] => index
+        )
+
+    [dsn:protected] => mysql:dbname=websailor;host=localhost;port=3306
+    [DBConf:Core\BaseDataBase:private] => 
+    [DBOptions:Core\BaseDataBase:private] => Array
+        (
+            [1002] => SET NAMES utf8
+        )
+
+)
+
+2018-08-17T10:49:52-03:00 #ROTA: /sys/mca/oper/4 #IP: 127.0.0.1
+erro55
+erro55
+erro55
+2018-08-17T10:49:52-03:00 #ROTA: /invalida #IP: 127.0.0.1
+2018-08-17T10:50:24-03:00 #ROTA: /sys/mca/oper/4 #IP: 127.0.0.1
+erro55
+erro5500
+erro55
+erro55
+Core\Route Object
+(
+    [req:Core\Route:private] => Array
+        (
+            [url] => /sys/mca/oper/4
+            [ws] => 0
+            [escopo] => sys
+            [params] => Array
+                (
+                    [0] => 4
+                )
+
+            [rota] => sys/mca/oper/{}
+            [controller] => WSController
+            [action] => index
+        )
+
+    [dsn:protected] => mysql:dbname=websailor;host=localhost;port=3306
+    [DBConf:Core\BaseDataBase:private] => 
+    [DBOptions:Core\BaseDataBase:private] => Array
+        (
+            [1002] => SET NAMES utf8
+        )
+
+)
+
+2018-08-17T10:52:32-03:00 #ROTA: /sys/mca/oper/4 #IP: 127.0.0.1
+erro55
+sys
+erro55
+erro55
+Core\Route Object
+(
+    [req:Core\Route:private] => Array
+        (
+            [url] => /sys/mca/oper/4
+            [ws] => 0
+            [escopo] => sys
+            [params] => Array
+                (
+                    [0] => 4
+                )
+
+            [rota] => sys/mca/oper/{}
+            [controller] => WSController
+            [action] => index
+        )
+
+    [dsn:protected] => mysql:dbname=websailor;host=localhost;port=3306
+    [DBConf:Core\BaseDataBase:private] => 
+    [DBOptions:Core\BaseDataBase:private] => Array
+        (
+            [1002] => SET NAMES utf8
+        )
+
+)
+
+2018-08-17T10:57:57-03:00 #ROTA: /sys/mca/oper/4 #IP: 127.0.0.1
+2018-08-17T10:58:35-03:00 #ROTA: /sys/mca/oper/4 #IP: 127.0.0.1
+2018-08-17T10:58:35-03:00 #ROTA: /invalida #IP: 127.0.0.1
+2018-08-17T11:17:44-03:00 #ROTA: /invalida #IP: 127.0.0.1
+2018-08-17T11:44:11-03:00 #IP: 127.0.0.1 #ROTA: /sys/mca/oper/4
+Core\Route Object
+(
+    [req:Core\Route:private] => Array
+        (
+            [url] => /sys/mca/oper/4
+            [params] => Array
+                (
+                    [0] => 4
+                )
+
+            [rota] => sys/mca/oper/{}
+            [ws] => 0
+            [prefixo] => sys
+            [controller] => WSController
+            [action] => index
+        )
+
+    [dsn:protected] => mysql:dbname=websailor;host=localhost;port=3306
+    [DBConf:Core\BaseDataBase:private] => 
+    [DBOptions:Core\BaseDataBase:private] => Array
+        (
+            [1002] => SET NAMES utf8
+        )
+
+)
+
+2018-08-17T11:48:09-03:00 #IP: 127.0.0.1 #ROTA: /sys/mca/oper/4
+Core\Route Object
+(
+    [req:Core\Route:private] => Array
+        (
+            [url] => /sys/mca/oper/4
+            [params] => Array
+                (
+                    [0] => 4
+                )
+
+            [rota] => sys/mca/oper/{}
+            [controller] => WSController
+            [action] => index
+        )
+
+    [dsn:protected] => mysql:dbname=websailor;host=localhost;port=3306
+    [DBConf:Core\BaseDataBase:private] => 
+    [DBOptions:Core\BaseDataBase:private] => Array
+        (
+            [1002] => SET NAMES utf8
+        )
+
+)
+
+2018-08-17T14:14:01-03:00 #IP: 127.0.0.1 #ROTA: /
+2018-08-17T14:14:01-03:00 #IP: 127.0.0.1 #ROTA: /
+2018-08-17T14:14:01-03:00 #IP: 127.0.0.1 #ROTA: /
+2018-08-17T14:14:01-03:00 #IP: 127.0.0.1 #ROTA: /
+2018-08-17T14:14:01-03:00 #IP: 127.0.0.1 #ROTA: /
+2018-08-17T14:14:01-03:00 #IP: 127.0.0.1 #ROTA: /
+2018-08-17T14:14:01-03:00 #IP: 127.0.0.1 #ROTA: /
+2018-08-17T14:14:01-03:00 #IP: 127.0.0.1 #ROTA: /
+2018-08-17T14:14:01-03:00 #IP: 127.0.0.1 #ROTA: /
+2018-08-17T14:14:01-03:00 #IP: 127.0.0.1 #ROTA: /
+2018-08-17T14:14:01-03:00 #IP: 127.0.0.1 #ROTA: /
+2018-08-17T14:14:01-03:00 #IP: 127.0.0.1 #ROTA: /
+2018-08-17T14:14:01-03:00 #IP: 127.0.0.1 #ROTA: /
+2018-08-17T14:14:02-03:00 #IP: 127.0.0.1 #ROTA: /
+2018-08-17T14:14:02-03:00 #IP: 127.0.0.1 #ROTA: /
+2018-08-17T14:14:02-03:00 #IP: 127.0.0.1 #ROTA: /
+2018-08-17T14:14:02-03:00 #IP: 127.0.0.1 #ROTA: /
+2018-08-17T14:14:02-03:00 #IP: 127.0.0.1 #ROTA: /
+2018-08-17T14:14:02-03:00 #IP: 127.0.0.1 #ROTA: /
+2018-08-17T14:14:02-03:00 #IP: 127.0.0.1 #ROTA: /
+2018-08-17T14:14:02-03:00 #IP: 127.0.0.1 #ROTA: /
+2018-08-17T14:14:22-03:00 #IP: 127.0.0.1 #ROTA: /
+2018-08-17T14:14:22-03:00 #IP: 127.0.0.1 #ROTA: /
+2018-08-17T14:14:22-03:00 #IP: 127.0.0.1 #ROTA: /
+2018-08-17T14:14:22-03:00 #IP: 127.0.0.1 #ROTA: /
+2018-08-17T14:14:22-03:00 #IP: 127.0.0.1 #ROTA: /
+2018-08-17T14:14:22-03:00 #IP: 127.0.0.1 #ROTA: /
+2018-08-17T14:14:22-03:00 #IP: 127.0.0.1 #ROTA: /
+2018-08-17T14:14:22-03:00 #IP: 127.0.0.1 #ROTA: /
+2018-08-17T14:14:22-03:00 #IP: 127.0.0.1 #ROTA: /
+2018-08-17T14:14:22-03:00 #IP: 127.0.0.1 #ROTA: /
+2018-08-17T14:14:22-03:00 #IP: 127.0.0.1 #ROTA: /
+2018-08-17T14:14:23-03:00 #IP: 127.0.0.1 #ROTA: /
+2018-08-17T14:14:23-03:00 #IP: 127.0.0.1 #ROTA: /
+2018-08-17T14:14:23-03:00 #IP: 127.0.0.1 #ROTA: /
+2018-08-17T14:14:23-03:00 #IP: 127.0.0.1 #ROTA: /
+2018-08-17T14:14:23-03:00 #IP: 127.0.0.1 #ROTA: /
+2018-08-17T14:14:23-03:00 #IP: 127.0.0.1 #ROTA: /
+2018-08-17T14:14:23-03:00 #IP: 127.0.0.1 #ROTA: /
+2018-08-17T14:14:23-03:00 #IP: 127.0.0.1 #ROTA: /
+2018-08-17T14:14:23-03:00 #IP: 127.0.0.1 #ROTA: /
+2018-08-17T14:14:23-03:00 #IP: 127.0.0.1 #ROTA: /
+2018-08-17T14:14:27-03:00 #IP: 127.0.0.1 #ROTA: /sys/mca/oper/4
+Core\Route Object
+(
+    [req:Core\Route:private] => Array
+        (
+            [url] => /sys/mca/oper/4
+            [params] => Array
+                (
+                    [0] => 4
+                )
+
+            [rota] => sys/mca/oper/{}
+            [controller] => WSController
+            [action] => index
+        )
+
+    [dsn:protected] => mysql:dbname=websailor;host=localhost;port=3306
+    [DBConf:Core\BaseDataBase:private] => 
+    [DBOptions:Core\BaseDataBase:private] => Array
+        (
+            [1002] => SET NAMES utf8
+        )
+
+)
+
+2018-08-17T14:14:27-03:00 #IP: 127.0.0.1 #ROTA: /favicon.ico
+2018-08-17T14:15:32-03:00 #IP: 127.0.0.1 #ROTA: /
+2018-08-17T14:15:32-03:00 #IP: 127.0.0.1 #ROTA: /sigma
+2018-08-17T14:15:38-03:00 #IP: 127.0.0.1 #ROTA: /sigma
+2018-08-17T16:00:04-03:00 #IP: 127.0.0.1 #ROTA: /
+#auth->thor() - rota não encontrada OU dados inconsistentes
+
+2018-08-17T16:00:05-03:00 #IP: 127.0.0.1 #ROTA: /sigma
+#auth->thor() - rota não encontrada OU dados inconsistentes
+
+2018-08-17T16:00:33-03:00 #IP: 127.0.0.1 #ROTA: /sigma
+#auth->thor() - rota não encontrada OU dados inconsistentes
+
+2018-08-17T16:00:44-03:00 #IP: 127.0.0.1 #ROTA: /sigma
+#auth->thor() - rota não encontrada OU dados inconsistentes
+
+2018-08-17T16:00:45-03:00 #IP: 127.0.0.1 #ROTA: /sigma
+#auth->thor() - rota não encontrada OU dados inconsistentes
+
+2018-08-17T16:00:46-03:00 #IP: 127.0.0.1 #ROTA: /sigma
+#auth->thor() - rota não encontrada OU dados inconsistentes
+
+2018-08-17T16:03:04-03:00 #IP: 127.0.0.1 #ROTA: /sys/mca/oper/4
+#auth->thor() - rota encontrada - dados consistentes
+
+#prefixo1->sys->tipo=pagina
+
+Core\Route Object
+(
+    [req:Core\Route:private] => Array
+        (
+            [url] => /sys/mca/oper/4
+            [params] => Array
+                (
+                    [0] => 4
+                )
+
+            [rota] => sys/mca/oper/{}
+        )
+
+    [dsn:protected] => mysql:dbname=websailor;host=localhost;port=3306
+    [DBConf:Core\BaseDataBase:private] => 
+    [DBOptions:Core\BaseDataBase:private] => Array
+        (
+            [1002] => SET NAMES utf8
+        )
+
+)
+
+2018-08-17T16:05:09-03:00 #IP: 127.0.0.1 #ROTA: /sys/mca/oper/4
+#auth->thor() - rota encontrada - dados consistentes
+
+#prefixo1->sys->tipo=pagina
+
+Core\Route Object
+(
+    [req:Core\Route:private] => Array
+        (
+            [url] => /sys/mca/oper/4
+            [params] => Array
+                (
+                    [0] => 4
+                )
+
+            [rota] => sys/mca/oper/{}
+        )
+
+    [dsn:protected] => mysql:dbname=websailor;host=localhost;port=3306
+    [DBConf:Core\BaseDataBase:private] => 
+    [DBOptions:Core\BaseDataBase:private] => Array
+        (
+            [1002] => SET NAMES utf8
+        )
+
+)
+
+2018-08-17T16:20:59-03:00 #IP: 127.0.0.1 #ROTA: /
+#auth->thor() - rota não encontrada OU dados inconsistentes
+
+2018-08-17T16:20:59-03:00 #IP: 127.0.0.1 #ROTA: /sigma
+#auth->thor() - rota não encontrada OU dados inconsistentes
+
+2018-08-17T16:20:59-03:00 #IP: 127.0.0.1 #ROTA: /favicon.ico
+#auth->thor() - rota não encontrada OU dados inconsistentes
+
+2018-08-17T16:21:01-03:00 #IP: 127.0.0.1 #ROTA: /sigma
+#auth->thor() - rota não encontrada OU dados inconsistentes
+
+2018-08-17T16:21:08-03:00 #IP: 127.0.0.1 #ROTA: /sys/mca/oper/4
+#auth->thor() - rota encontrada - dados consistentes
+
+#prefixo1->sys->tipo=pagina
+
+Array
+(
+    [url] => /sys/mca/oper/4
+    [params] => Array
+        (
+            [0] => 4
+        )
+
+    [rota] => sys/mca/oper/{}
+)
+
+2018-08-17T16:23:47-03:00 #IP: 127.0.0.1 #ROTA: /sys/mca/oper/4
+#auth->thor() - rota encontrada - dados consistentes
+
+#prefixo1->sys->tipo=pagina
+
+Array
+(
+    [url] => /sys/mca/oper/4
+    [params] => Array
+        (
+            [0] => 4
+        )
+
+    [rota] => sys/mca/oper/{}
+)
+
+2018-08-17T16:28:12-03:00 #IP: 127.0.0.1 #ROTA: /sys/mca/oper/4
+#auth->thor() - rota encontrada - dados consistentes
+#prefixo1->sys->tipo=pagina
+Array
+(
+    [url] => /sys/mca/oper/4
+    [params] => Array
+        (
+            [0] => 4
+        )
+
+    [rota] => sys/mca/oper/{}
+)
+
+Array
+(
+    [url] => /sys/mca/oper/4
+    [params] => Array
+        (
+            [0] => 4
+        )
+
+    [rota] => sys/mca/oper/{}
+)
+
+2018-08-17T16:28:49-03:00 #IP: 127.0.0.1 #ROTA: /sys/mca/oper/4
+#auth->thor() - rota encontrada - dados consistentes
+#prefixo1->sys->tipo=pagina
+1
+Array
+(
+    [url] => /sys/mca/oper/4
+    [params] => Array
+        (
+            [0] => 4
+        )
+
+    [rota] => sys/mca/oper/{}
+)
+
+2018-08-17T16:38:07-03:00 #IP: 127.0.0.1 #ROTA: /sys/mca/oper/4
+#auth->thor() - rota encontrada - dados consistentes
+#prefixo1->sys->tipo=pagina
+1
+Array
+(
+    [url] => /sys/mca/oper/4
+    [params] => Array
+        (
+            [0] => 4
+        )
+
+    [rota] => sys/mca/oper/{}
+)
+
+2018-08-17T16:40:32-03:00 #IP: 127.0.0.1 #ROTA: /sys/mca/oper/4
+#auth->thor() - rota encontrada - dados consistentes - 0
+#prefixo1->sys->tipo=pagina
+1
+Array
+(
+    [url] => /sys/mca/oper/4
+    [params] => Array
+        (
+            [0] => 4
+        )
+
+    [rota] => sys/mca/oper/{}
+)
+
+2018-08-17T16:50:43-03:00 #IP: 127.0.0.1 #ROTA: /sys/mca/oper/4
+#auth->thor() - rota não encontrada OU dados inconsistentes
+
+2018-08-17T17:01:31-03:00 #IP: 127.0.0.1 #ROTA: /sys/mca/oper/4
+#auth->thor() - rota encontrada - dados consistentes - sys
+#prefixo1->sys->tipo=pagina
+ROTA DE DOMÍNIO AUTENTIFICAVEL/AUTORIDAVEL
+Array
+(
+    [controller] => WSController
+    [action] => index
+    [ws] => 0
+    [prefixo] => sys
+)
+
+Array
+(
+    [url] => /sys/mca/oper/4
+    [params] => Array
+        (
+            [0] => 4
+        )
+
+    [rota] => sys/mca/oper/{}
+)
+
+2018-08-17T17:01:46-03:00 #IP: 127.0.0.1 #ROTA: /sys/mca/oper/4
+#auth->thor() - rota encontrada - dados consistentes - sys
+#prefixo1->sys->tipo=pagina
+ROTA DE DOMÍNIO AUTENTIFICAVEL/AUTORIDAVEL
+Array
+(
+    [controller] => WSController
+    [action] => index
+    [ws] => 0
+    [prefixo] => sys
+)
+
+Array
+(
+    [url] => /sys/mca/oper/4
+    [params] => Array
+        (
+            [0] => 4
+        )
+
+    [rota] => sys/mca/oper/{}
+)
+

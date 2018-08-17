@@ -2,6 +2,7 @@
 namespace Core;
 use App\Config;
 use Storage\DBConf;
+use Core\Debugger as d;
 use PDO;
 /**
 * @developer 	Michel Larrosa
@@ -34,6 +35,7 @@ class BaseDataBase{
 					if(!$connect){
 						throw new PDOException();
 					}else{
+            // d::ulog("BaseDataBase new PDO ok");
 						$result_o = $connect->query($query);
 						if($result_o){
 							$result= $result_o->fetchAll(PDO::FETCH_ASSOC);

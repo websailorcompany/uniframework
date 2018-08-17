@@ -1,5 +1,6 @@
 <?php
 namespace Core;
+use App\Config;
 
 /**
  * @developer   Michel Larrosa
@@ -22,5 +23,13 @@ class Debugger{
     echo "<pre>";
     print_r($value);
     echo "</pre>";
+  }
+  static function ulog($msg){
+    $filename=Config::$logfile;
+    if(is_string($msg)||is_numeric($msg)){
+      file_put_contents($filename , $msg."\n", FILE_APPEND );
+    }else{
+      file_put_contents($filename , print_r($msg, true)."\n", FILE_APPEND );
+    }
   }
 }

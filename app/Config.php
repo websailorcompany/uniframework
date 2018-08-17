@@ -23,29 +23,36 @@ Class Config{
 		public static $Descricao="Sistema de Gestão Pública";
 		public static $Tabela="xyz456_";
 		public static $Copyright="";
+		public static $logfile="/home/ecomp/websailor®/PROJETOS/uniframework.websailor/system/acesso.log";
 
 		public static $SessaoTempo=3600;
 		public static $Hash_algo="whirlpool";
 		public static $Template="AdminLTE-2.3.7";
 
-		public static $loginRoute=[
-			"adm"=>"/login/administrador",
-			"ger"=>"/login/operacional",
-			"cid"=>"/login"
+		public static $route=[
+			"prefixo"=>[
+				"sys"=>"sys",
+				"adm"=>"adm",
+				"cid"=>"cidadao",
+			],
+			"login"=>[
+				"sys"=>"/login/sistema",
+				"adm"=>"/login/administrador",
+				"cid"=>"/login",
+			],
+			"index"=>[
+				"sys"=>"/sys",
+				"adm"=>"/adm",
+				"cid"=>"/cidadao"
+			]
 		];
-		public static $indexRoute=[
-			"adm"=>"/administrador",
-			"ger"=>"/operacional",
-			"cid"=>"/cidadao",
-			"pub"=>"/sigma"
+
+		public static $Pub=[
+			"prefixo"=>"pub",
+			"index"=>"/sigma"
 		];
 		public static $redirect=[
 			"inexistente"=>"",
 			"invalida"=>""
 		];
-		public static $EscopoPrefixo=[
-			"adm"=>"administrador",
-			"ger"=>"operacional",
-			"cid"=>"cidadao"
-		]
 }

@@ -102,3 +102,5 @@ documentos gerados durante processo ficam na aplicação(licenças, pareceres)
 
 
 //no futuro, com dual-CMS será possível que rotas públicas não tenham o prefixo pub/ sendo somente /
+// SEO não necessário para sistemas com login
+// sys/ e adm/ serão prefixos

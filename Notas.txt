@@ -1,0 +1,5 @@
+As rotas estão todas na tabela de rotas, inclusive as "sys".
+Isso pode ser contornado rapidamente colocando-se as rotas em um arquivo ou, preferencialmente, em tabela separada.
+Somente os "sys" têm essa necessidade.
+A partir daqui qualquer grupo/comunidade/time pode estar em tabela única.
+Instalações com vários sites/sistemas/tipos de acesso devem ter rotas em arquivo ou, preferencialmente, em tabela separada.

@@ -1,5 +1,6 @@
 <?php
 namespace Core;
+use App\Controllers;
 use Core\Redirect;
 use Core\Session;
 use Core\BaseDataBase;
@@ -14,7 +15,7 @@ use App\Config;
  * @license     Creative Commons License version 4; see LICENSE.txt
  */
 class Route extends BaseDataBase{
-  // objeto privado: requisição
+  # objeto privado: requisição
   private $req;
   public function __construct(){
     parent::__construct();
@@ -23,69 +24,58 @@ class Route extends BaseDataBase{
   }
 
   private function newrun(){
-    ($this->req['url']=parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH))=="/"?Redirect::route("/pub/"):NULL;
-
+    d::ulog(date(DATE_ATOM)." #IP: ". $_SERVER['REMOTE_ADDR']." #ROTA: ".$_SERVER['REQUEST_URI']);
+    ($this->req['url']=parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH))=="/"?Redirect::route(Config::$Pub['index']):NULL;
     $urlArray=explode("/", $this->req['url']);array_shift($urlArray);
+    # se tiver barra no fim da rota
     (empty(end($urlArray))?array_pop($urlArray):NULL);
     $routeArray=$urlArray;
-    // d::b(array($url, $urlArray));
-    if (($prefixo=array_shift($urlArray))=="ws") {
-      // tipo = webservice
-      $this->req['tipo']=1;
-      $escopo = array_shift($urlArray);
-    }else{
-      // tipo = pagina
-      $escopo=$prefixo;
-      $this->req['tipo']=2;
-    }
-    // echo "URL inválida";return;
-    $this->req['escopo']=($escopo=="reg"?2:($escopo=="job"?3:($escopo=="adm"?4:1)));
-    if($this->req['escopo']){
-      foreach ($routeArray as $key => &$value) {
-        if(is_numeric($value)){
-          $this->req['params'][]=$value;
-          $value="{}";
-        }
+
+    #
+    # transformando url em rota e definindo parametros #
+    #
+    foreach ($routeArray as $key => &$value) {
+      if(is_numeric($value)){
+        $this->req['params'][]=$value;
+        $value="{}";
       }
-      $this->req['rota']=implode('/', $routeArray);
-      $exec = $this->execQuery("SELECT controller, action FROM rotas WHERE escopo={$this->req['escopo']} AND rota = '{$this->req['rota']}'");
-      // d::b($exec);
-      if ($exec['status'] && $exec['numRows']==1) {
-        $this->req['controller']=$exec['result'][0]['controller'];
-        $this->req['action']=$exec['result'][0]['action'];
-        session_start();
-        #
-        # tratamento de login
-        #
-        $auth=new BaseAuth();
-        $auth->verificaLogin($rota, $url);
-        #
-        # se ocorrer algo com as permissões, a função anterior redireciona
-        #
-        # instanciando o controler
-        #
-        $controller = BaseController::newController($controller, $action, $rota);
-        switch (count($param)) {
-          case 1:
-            $controller->$action($param[0]);
-            break;
-          case 2:
-            $controller->$action($param[0], $param[1]);
-            break;
-          case 3:
-            $controller->$action($param[0], $param[1], $param[2]);
-            break;
-          default:
-            $controller->$action();
-            break;
-        }
-      }else{
-        echo file_get_contents("../system/administrator/static/nao_encontrada.html");
-      }
-    }else{
-      Redirect::route("/invalida");
     }
-    d::b(array($this));
+    $this->req['rota']=implode('/', $routeArray);
+    #
+    # agora a rota poderá ser utilizada para auth->thor()
+    #
+
+    #
+    # trata/verifica login/identidade
+    # 'url' para verificar escopo e realizar login se necessário
+    #
+    session_start();
+    $auth=new BaseAuth();
+    $session = $auth->thor($this->req['rota'], $urlArray);
+    d::ulog($session);
+
+    #
+    # auth->thor() aproveita query e trás dados na rota [action, controller, ws]
+    # se ocorrer algo com as permissões, a função anterior redireciona
+    # se ocorrer rota não encontrada retorna NULL
+    # se login feito retorna dados na rota e segue em frente
+    # se escopo publico retorna Config::$Pub['prefixo'] e segue em frente
+    #
+
+    if ($session != NULL) {
+      array_merge($this->req, $session);
+      d::ulog($this->req);
+
+      # instanciando o controler
+      #
+      // $controller = BaseController::newController($this->req['controller'], $this->req['action'], $this->req['rota']);
+      // $action = $this->req['action'];
+      // isset($this->req['params'])?$controller->$action($this->req['params']):$controller->$action();
+
+    }else{
+      echo file_get_contents("../system/administrator/static/nao_encontrada.html");
+      // Redirect::route("/invalida");
+    }
   }
 
   private function getQuery(){
