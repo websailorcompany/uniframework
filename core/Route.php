@@ -56,8 +56,8 @@ class Route extends BaseDataBase{
 
     #
     # auth->thor() aproveita query e trás dados na rota [action, controller, ws]
+    # se "rota não encontrada" retorna NULL
     # se ocorrer algo com as permissões, a função anterior redireciona
-    # se ocorrer rota não encontrada retorna NULL
     # se login feito retorna dados na rota e segue em frente
     # se escopo publico retorna Config::$Pub['prefixo'] e segue em frente
     #

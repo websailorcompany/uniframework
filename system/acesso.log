@@ -595,3 +595,57 @@ Array
     [rota] => sys/mca/oper/{}
 )
 
+2018-08-23T10:19:27-03:00 #IP: 127.0.0.1 #ROTA: /sigma
+#auth->thor() - rota não encontrada OU dados inconsistentes
+
+2018-08-23T14:51:10-03:00 #IP: 127.0.0.1 #ROTA: /
+#auth->thor() - rota não encontrada OU dados inconsistentes
+
+2018-08-23T14:51:10-03:00 #IP: 127.0.0.1 #ROTA: /sigma
+#auth->thor() - rota não encontrada OU dados inconsistentes
+
+2018-08-23T14:51:11-03:00 #IP: 127.0.0.1 #ROTA: /favicon.ico
+#auth->thor() - rota não encontrada OU dados inconsistentes
+
+2018-08-23T21:26:33-03:00 #IP: 127.0.0.1 #ROTA: /favicon.ico
+#auth->thor() - rota não encontrada OU dados inconsistentes
+
+2018-08-23T21:26:37-03:00 #IP: 127.0.0.1 #ROTA: /favicon.ico
+#auth->thor() - rota não encontrada OU dados inconsistentes
+
+2018-08-23T21:49:05-03:00 #IP: 127.0.0.1 #ROTA: /
+#auth->thor() - rota não encontrada OU dados inconsistentes
+
+2018-08-23T21:49:05-03:00 #IP: 127.0.0.1 #ROTA: /sigma
+#auth->thor() - rota não encontrada OU dados inconsistentes
+
+2018-08-24T11:11:53-03:00 #IP: 127.0.0.1 #ROTA: /
+#auth->thor() - rota não encontrada OU dados inconsistentes
+
+2018-08-24T11:11:53-03:00 #IP: 127.0.0.1 #ROTA: /sigma
+#auth->thor() - rota não encontrada OU dados inconsistentes
+
+2018-08-24T11:11:53-03:00 #IP: 127.0.0.1 #ROTA: /favicon.ico
+#auth->thor() - rota não encontrada OU dados inconsistentes
+
+2018-08-24T11:12:01-03:00 #IP: 127.0.0.1 #ROTA: /favicon.ico
+#auth->thor() - rota não encontrada OU dados inconsistentes
+
+2018-08-24T11:12:50-03:00 #IP: 127.0.0.1 #ROTA: /
+#auth->thor() - rota não encontrada OU dados inconsistentes
+
+2018-08-24T11:12:50-03:00 #IP: 127.0.0.1 #ROTA: /sigma
+#auth->thor() - rota não encontrada OU dados inconsistentes
+
+2018-08-24T11:38:47-03:00 #IP: 127.0.0.1 #ROTA: /
+#auth->thor() - rota não encontrada OU dados inconsistentes
+
+2018-08-24T11:38:47-03:00 #IP: 127.0.0.1 #ROTA: /sigma
+#auth->thor() - rota não encontrada OU dados inconsistentes
+
+2018-08-24T11:38:48-03:00 #IP: 127.0.0.1 #ROTA: /favicon.ico
+#auth->thor() - rota não encontrada OU dados inconsistentes
+
+2018-08-24T11:38:48-03:00 #IP: 127.0.0.1 #ROTA: /favicon.ico
+#auth->thor() - rota não encontrada OU dados inconsistentes
+

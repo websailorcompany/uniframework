@@ -23,7 +23,7 @@ Class Config{
 		public static $Descricao="Sistema de Gestão Pública";
 		public static $Tabela="xyz456_";
 		public static $Copyright="";
-		public static $logfile="/home/ecomp/websailor®/PROJETOS/uniframework.websailor/system/acesso.log";
+		public static $logfile="/home/michel/websailor®/PROJETOS/uniframework.websailor/system/acesso.log";
 
 		public static $SessaoTempo=3600;
 		public static $Hash_algo="whirlpool";
