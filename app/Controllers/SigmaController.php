@@ -1,7 +1,7 @@
 <?php
 namespace App\Controllers;
 use Core\BaseController;
-class UniController extends BaseController{
+class SigmaController extends BaseController{
   public function index(){
     echo "sigma";
   }

@@ -9,8 +9,8 @@ namespace Core;
  * @license     Creative Commons License version 4; see LICENSE.txt
  */
 
-class Session
-{
+
+class Session{
     public static function set($key, $value){
         $_SESSION[$key] = $value;
     }
@@ -30,3 +30,15 @@ class Session
         unset($_SESSION[$keys]);
     }
 }
+/* CHAVES NATIVAS
+ * last_url
+ * url
+ * email
+ * categoria
+ * upages
+ * usession
+ *
+ *
+ *
+ *
+ */

@@ -8,8 +8,8 @@ use Core\BaseController;
 use Core\Redirect;
 use App\Config;
 /**
+systema
 administrador
-gerenciamento
 registrado
 cidadao
  */

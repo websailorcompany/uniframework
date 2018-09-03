@@ -74,14 +74,15 @@ class BaseAuth extends BaseDataBase{
     # PRIMEIRO VERIFICO ESCOPO DA ROTA
     # coletando juntamente o action e controller
     #
-    $exec = $this->execQuery("SELECT r.escopo as escopoid, r.controller, r.action, e.escopo FROM rotas as r , escopo as e WHERE r.rota='sys/mca/oper/{}' AND e.id=r.escopo ");
+    $exec = $this->execQuery("SELECT r.escopo as escopoid, r.controller, r.action, e.escopo
+      FROM rotas as r , escopo as e WHERE r.rota='{$rota}' AND e.id=r.escopo ");
     if ($exec['numRows']==1 && isset($exec['result'][0]['escopo'], $exec['result'][0]['controller'], $exec['result'][0]['action'])) {
       $escopo = $exec['result'][0]['escopo'];
-      d::ulog("#auth->thor() - rota encontrada - dados consistentes - {$escopo}");
+      d::ulog("#auth->thor()  rota OK - dados OK - '{$escopo}'");
       $req['controller'] = $exec['result'][0]['controller'];
       $req['action'] = $exec['result'][0]['action'];
     }else {
-      d::ulog("#auth->thor() - rota não encontrada OU dados inconsistentes");
+      d::ulog("#auth->thor()  rota || dados FAIL");
       return NULL;
     }
 
@@ -90,31 +91,37 @@ class BaseAuth extends BaseDataBase{
     #
     if(($prefixo=array_shift($urlArray))=="ws") {
       $req['ws']=1;
-      d::ulog("#prefixo1->WS->tipo=webservice");
+      d::ulog("#prefixo1=WS - tipo=webservice");
       $prefixo = array_shift($urlArray);
-      d::ulog("#prefixo2->{$prefixo}");
+      d::ulog("#prefixo2={$prefixo}");
     }else{
       $req['ws']=0;
-      d::ulog("#prefixo1->{$prefixo}->tipo=pagina");
+      d::ulog("#prefixo1={$prefixo} - tipo=pagina");
     }
 
     #
-    #verifica escopo
+    #verifica validade do escopo
     #
     if($escopo == NULL){
       d::ulog("ROTA DE DOMÍNIO PUBLICO");
       return $req;
     }elseif($prefixo == $escopo){
-      d::ulog("ROTA DE DOMÍNIO AUTENTIFICAVEL/AUTORIDAVEL");
+      d::ulog("ROTA DE DOMÍNIO AUTENTIFICAVEL/AUTORIZAVEL");
       if(in_array($prefixo, Config::$route['prefixo'])){
+        d::ulog("Prefixo '{$prefixo}' OK");
         $req['prefixo']=$prefixo;
+        #
+        # verificação de escopo de usuario
+        #
       }else{
-        d::ulog("Prefixo não encontrado nas configurações");
-        $req['prefixo']=Config::$Pub['prefixo'];
+        d::ulog("Prefixo '{$prefixo}' não encontrado nas configurações");
+        // $req['prefixo']=Config::$Pub['prefixo'];
+        return NULL;
       }
       return $req;
     }else{
-      // erro não optativo => $prefixo de rota deve ser igual ao $escopo de rota
+      d::ulog("erro inaceitável => prefixo de rota deve ser igual ao escopo de rota\n '{$prefixo}' != '{$escopo}'");
+      return NULL;
     }
 
     if ($escopo == 'operacional' || $escopo == 'admin' || $escopo== 'registrado') { // página é acessível somente pela equipe operacional ou registrados
